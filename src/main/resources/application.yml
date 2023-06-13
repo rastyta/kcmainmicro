@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: kcmainmicro
+  cloud:
+    kubernetes:
+      discovery:
+        enabled: true
+      reload:
+        enabled: true
+        monitoring-config-maps: true
+        strategy: refresh
+        mode: event
+      config:
+        name: kcmainmicro
