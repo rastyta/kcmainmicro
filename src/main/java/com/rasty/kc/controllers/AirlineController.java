@@ -20,7 +20,7 @@ public class AirlineController {
 
     @GetMapping("/airlines")
     public ResponseEntity<List<Airline>> airlines() {
-        List<ServiceInstance> urls = discoveryClient.getInstances("kc-service");
+        List<ServiceInstance> urls = discoveryClient.getInstances("service-kcmainmicro");
         String demomicroUrl = urls.get(0).getUri().toString();
         String url = demomicroUrl + "/airlines";
 
